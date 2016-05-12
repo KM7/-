@@ -13,6 +13,8 @@
 document.querySelector('body').addEventListener('touchstart', function (ev) {
     event.preventDefault();
 });
+document.addEventListener("WeixinJSBridgeReady",function(){    WeixinJSBridge.call("showToolbar")});
+
 </script>
     
 
