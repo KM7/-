@@ -1,6 +1,7 @@
 var num=100;
 var onPressed=false;
 var pts=Array(0);
+var start=false;
 
 
 
@@ -13,11 +14,15 @@ frameRate(30);
 
 function draw(){
 //background(255);
-beginShape();
-noFill();
 //println(pts.length);
+if (!start){
+background(255,375,32);
+textAlign(CENTER,CENTER);
+text("This is a pubes generator.",width/2,height/2)
+text("Touch the screen to start generating.",width/2,height/2+20)
 
 
+} else{
   if (onPressed) {
      var newP = new Particle(mouseX, mouseY, 0,pts.length, pts.length);
       pts.push(newP);
@@ -35,6 +40,8 @@ noFill();
       pts.splice(i,1);
     }
   }
+  
+}
 }
 
 
@@ -44,6 +51,10 @@ function mousePressed() {
 }
  
 function mouseReleased() {
+  if (start==false){
+  background(255,178,233);
+  start=true;
+  }
   onPressed = false;
 }
 
