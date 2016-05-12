@@ -2,6 +2,8 @@ var num=100;
 var onPressed=false;
 var pts=Array(0);
 var start=false;
+var img;
+
 
 
 
@@ -9,6 +11,8 @@ function setup(){
 createCanvas(windowWidth, windowHeight);
 background(255);
 frameRate(30);
+imageMode(CENTER);
+
 }
 
 
@@ -18,6 +22,7 @@ function draw(){
 if (!start){
 background(255,375,32);
 textAlign(CENTER,CENTER);
+image(img,width/2,height/2-120,200,200)
 text("This is a pubes generator.",width/2,height/2)
 text("Touch the screen to start generating.",width/2,height/2+20)
 
@@ -57,7 +62,9 @@ function mouseReleased() {
   }
   onPressed = false;
 }
-
+function preload() {
+  img = loadImage("img/pube.png");
+}
 
 
 function Particle(x,y,xOffset,yOffset){
