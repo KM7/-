@@ -15,7 +15,7 @@ function draw(){
 //background(255);
 beginShape();
 noFill();
-println(pts.length);
+//println(pts.length);
 
 
   if (onPressed) {
