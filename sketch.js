@@ -23,8 +23,8 @@ if (!start){
 background(255,375,32);
 textAlign(CENTER,CENTER);
 image(img,width/2,height/2-120,200,200);
-text("This is a pubes generator.",width/2,height/2);
-text("Touch the screen to start generating.",width/2,height/2+20);
+text("This is a pubes generator 在线阴毛生成器.",width/2,height/2);
+text("Touch the screen 触摸屏幕 to start generating.",width/2,height/2+20);
 text("V0.1 by KM7",width/2,height/2+40);
 
 
