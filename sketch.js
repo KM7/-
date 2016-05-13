@@ -111,7 +111,7 @@ function Particle(x,y,xOffset,yOffset){
      
     this.vel.add(this.acc);
     this.vel.mult(this.decay);
-    this.vel.limit(3);
+    this.vel.limit(1.3);
     this.loc.add(this.vel);
   }
    
@@ -121,7 +121,7 @@ function Particle(x,y,xOffset,yOffset){
 
      
     push();
-    //strokeWeight(this.weight*0.2);
+    strokeWeight(this.weight*0.2);
     translate(this.loc.x,this.loc.y);
     point(0,0);
     noStroke();
