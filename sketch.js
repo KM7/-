@@ -59,7 +59,8 @@ function mousePressed() {
  
 function mouseReleased() {
   if (start==false){
-  background(255,178,233);
+  //background(255,178,233);
+  background(255);
   start=true;
   }
   onPressed = false;
@@ -82,7 +83,7 @@ function Particle(x,y,xOffset,yOffset){
    this.weightRange=random(1,15);
    this.decay= random(0.75, 0.9);
    this.xOffset, yOffset;
-   this.c=color(random(255),random(255),255);
+   this.c=color(random(255),random(255),random(255));
    this.xOffset = xOffset;
    this.yOffset = yOffset;
 
@@ -123,10 +124,11 @@ function Particle(x,y,xOffset,yOffset){
     push();
     strokeWeight(this.weight*0.2);
     translate(this.loc.x,this.loc.y);
-    point(0,0);
-    noStroke();
-    stroke(0,this.alpha2);
+     noStroke();
     fill(this.c);
+    ellipse(0,0,this.weight,this.weight);
+    //point(0,0);
+    //stroke(0,this.alpha2);
     //sphere(weight);
     pop();
      
